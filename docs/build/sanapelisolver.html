@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sanapelisolver package &#8212; sanapelisolver 0.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="CHANGES" href="CHANGES.html" />
+    <link rel="prev" title="sanapelisolver" href="modules.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="sanapelisolver-package">
+<h1>sanapelisolver package<a class="headerlink" href="#sanapelisolver-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-sanapelisolver.sanapeli">
+<span id="sanapelisolver-sanapeli-module"></span><h2>sanapelisolver.sanapeli module<a class="headerlink" href="#module-sanapelisolver.sanapeli" title="Permalink to this headline">¶</a></h2>
+<p>Solves a game</p>
+<dl class="py class">
+<dt id="sanapelisolver.sanapeli.Game">
+<em class="property">class </em><code class="sig-prename descclassname">sanapelisolver.sanapeli.</code><code class="sig-name descname">Game</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">board</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sanapelisolver.sanapeli.Game" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Respresents a game.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="sanapelisolver.sanapeli.GameReader">
+<em class="property">class </em><code class="sig-prename descclassname">sanapelisolver.sanapeli.</code><code class="sig-name descname">GameReader</code><a class="headerlink" href="#sanapelisolver.sanapeli.GameReader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Read a game.</p>
+<dl class="py method">
+<dt id="sanapelisolver.sanapeli.GameReader.read_from_cmd_line">
+<em class="property">static </em><code class="sig-name descname">read_from_cmd_line</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sanapelisolver.sanapeli.GameReader.read_from_cmd_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a game from command line like this:
+rfrf
+gggg
+hhhh
+thyh</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="sanapelisolver.sanapeli.GameSize">
+<em class="property">class </em><code class="sig-prename descclassname">sanapelisolver.sanapeli.</code><code class="sig-name descname">GameSize</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sanapelisolver.sanapeli.GameSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="sanapelisolver.sanapeli.GameSize.HEIGHT">
+<code class="sig-name descname">HEIGHT</code><em class="property"> = 4</em><a class="headerlink" href="#sanapelisolver.sanapeli.GameSize.HEIGHT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="sanapelisolver.sanapeli.GameSize.WIDTH">
+<code class="sig-name descname">WIDTH</code><em class="property"> = 4</em><a class="headerlink" href="#sanapelisolver.sanapeli.GameSize.WIDTH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt id="sanapelisolver.sanapeli.InputError">
+<em class="property">exception </em><code class="sig-prename descclassname">sanapelisolver.sanapeli.</code><code class="sig-name descname">InputError</code><a class="headerlink" href="#sanapelisolver.sanapeli.InputError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="sanapelisolver.sanapeli.Solver">
+<em class="property">class </em><code class="sig-prename descclassname">sanapelisolver.sanapeli.</code><code class="sig-name descname">Solver</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">possible_words</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sanapelisolver.sanapeli.Solver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Solves a game.</p>
+<dl class="py method">
+<dt id="sanapelisolver.sanapeli.Solver.solve">
+<code class="sig-name descname">solve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">game</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sanapelisolver.sanapeli.Solver.solve" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="sanapelisolver.sanapeli.Word">
+<em class="property">class </em><code class="sig-prename descclassname">sanapelisolver.sanapeli.</code><code class="sig-name descname">Word</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">word</span></em>, <em class="sig-param"><span class="n">path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sanapelisolver.sanapeli.Word" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#sanapelisolver.sanapeli.Word" title="sanapelisolver.sanapeli.Word"><code class="xref py py-class docutils literal notranslate"><span class="pre">sanapelisolver.sanapeli.Word</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="sanapelisolver.sanapeli.WordReader">
+<em class="property">class </em><code class="sig-prename descclassname">sanapelisolver.sanapeli.</code><code class="sig-name descname">WordReader</code><a class="headerlink" href="#sanapelisolver.sanapeli.WordReader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Read list of words from a file.</p>
+<dl class="py method">
+<dt id="sanapelisolver.sanapeli.WordReader.read_from_file">
+<em class="property">static </em><code class="sig-name descname">read_from_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sanapelisolver.sanapeli.WordReader.read_from_file" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="sanapelisolver.sanapeli.main">
+<code class="sig-prename descclassname">sanapelisolver.sanapeli.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sanapelisolver.sanapeli.main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-sanapelisolver">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-sanapelisolver" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">sanapelisolver</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">Readme</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Modules</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">sanapelisolver package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CHANGES.html">Change History</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">sanapelisolver</a><ul>
+      <li>Previous: <a href="modules.html" title="previous chapter">sanapelisolver</a></li>
+      <li>Next: <a href="CHANGES.html" title="next chapter">CHANGES</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Joonas Kylliäinen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/sanapelisolver.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

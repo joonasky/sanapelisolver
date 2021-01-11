@@ -47,5 +47,5 @@ class TestGameReader(TestCase):
 
 class MockWordReader(object):
     @staticmethod
-    def read():
+    def read_from_file(file_name):
         return ["hei", "illallinen"]
