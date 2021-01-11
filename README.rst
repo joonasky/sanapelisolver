@@ -10,6 +10,12 @@ Solves a game called sanapeli.
 | d | e | f |
 | g | h | i |
 
+Documentation
+-------------
+
+`Is here
+<https://joonasky.github.io/sanapelisolver/>`_.
+
 Usage
 -----
 
