@@ -1,3 +1,7 @@
+"""
+Solves a game
+"""
+
 from collections import namedtuple
 from enum import Enum
 
@@ -16,10 +20,14 @@ class Word(namedtuple('Word', ['word', 'path'])):
 
 
 class Game(object):
+    """
+    Respresents a game.
+    """
+
     def __init__(self, board):
         self.board = board
         self.words = None
-    
+
     def __str__(self):
         string = "-----------\n"
         for line in self.board:
@@ -29,6 +37,10 @@ class Game(object):
 
 
 class Solver(object):
+    """
+    Solves a game.
+    """
+
     def __init__(self, word_reader):
         self.possible_words = word_reader.read()
 
@@ -47,6 +59,9 @@ class WordReader(object):
 
 
 class GameReader(object):
+    """
+    Read a game.
+    """
 
     @staticmethod
     def read_from_cmd_line():
@@ -59,10 +74,14 @@ class GameReader(object):
         return board
 
 
-if __name__ == "__main__":
+def main():
     print("SANAPELI RATKAISIJA: Anna peli")
     board = GameReader().read_from_cmd_line()
     print("------------------------------")
     game = Game(board)
-    solved_game = Solver(WordReader("words/words.txt")).solve(game)
+    Solver(WordReader("words/words.txt")).solve(game)
     print(str(game))
+
+
+if __name__ == "__main__":
+    main()

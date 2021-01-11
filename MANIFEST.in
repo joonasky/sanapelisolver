@@ -1,0 +1,7 @@
+include tox.ini
+recursive-include src *.py
+include README.md
+recursive-include tests test*
+include tests __init__.py
+include CHANGES.md
+recursive-include docs *

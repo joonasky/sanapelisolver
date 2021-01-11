@@ -1,7 +1,7 @@
 from unittest import TestCase
-from mock import patch
+from unittest.mock import patch
 
-from src.sanapeli import GameReader, InputError, Game, Solver
+from sanapelisolver.sanapeli import GameReader, InputError, Game, Solver
 
 
 class TestGameReader(TestCase):
@@ -42,7 +42,7 @@ class TestGameReader(TestCase):
             ['m', 'n', 'e', 'q']
         ]
         game = Game(board)
-        solved_game = Solver(MockWordReader()).solve(game)
+        Solver(MockWordReader()).solve(game)
 
 
 class MockWordReader(object):
