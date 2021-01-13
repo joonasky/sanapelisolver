@@ -1,7 +1,8 @@
 from unittest import TestCase
 from unittest.mock import patch
 
-from sanapelisolver.sanapeli import GameReader, InputError, Game, Solver
+from sanapelisolver.cli import InteractiveGameReader, InputError, Game
+from sanapelisolver.solver import SimpleSolver, WordReader
 
 
 class TestGameReader(TestCase):
@@ -13,15 +14,15 @@ class TestGameReader(TestCase):
             'ijkl',
             'mnoq'
         ]
-        expected_game = [
+        expected_game = Game([
             ['a', 'b', 'c', 'd'],
             ['e', 'f', 'g', 'h'],
             ['i', 'j', 'k', 'l'],
             ['m', 'n', 'o', 'q']
-        ]
+        ])
         with patch('builtins.input', side_effect=user_input):
-            game = GameReader().read_from_cmd_line()
-        self.assertEqual(game, expected_game)
+            game = InteractiveGameReader().read_game()
+        self.assertEqual(game.board, expected_game.board)
 
     def test_read_from_cmd_line_improper_input(self):
         user_input = [
@@ -32,9 +33,10 @@ class TestGameReader(TestCase):
 
         with patch('builtins.input', side_effect=user_input):
             with self.assertRaises(InputError):
-                GameReader().read_from_cmd_line()
+                InteractiveGameReader().read_game()
 
-    def test_solver(self):
+    @patch.object(WordReader, "read_from_file")
+    def test_solver(self, mock_method):
         board = [
             ['h', 'i', 'l', 'l'],
             ['e', 'f', 'a', 'h'],
@@ -42,10 +44,4 @@ class TestGameReader(TestCase):
             ['m', 'n', 'e', 'q']
         ]
         game = Game(board)
-        Solver(MockWordReader()).solve(game)
-
-
-class MockWordReader(object):
-    @staticmethod
-    def read_from_file(file_name):
-        return ["hei", "illallinen"]
+        SimpleSolver().solve(game)
