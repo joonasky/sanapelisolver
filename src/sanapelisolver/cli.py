@@ -50,6 +50,7 @@ class InteractiveGameReader(GameReader):
     """
 
     def read_game(self) -> Game:
+        print("Welcome to sanapelisolver! Type a game:")
         board = []
         for i in range(Game.HEIGHT):
             line = list(input())

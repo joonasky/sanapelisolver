@@ -6,9 +6,13 @@ SANAPELISOLVER
 
 Solves a game called sanapeli.
 
-| a | b | c |
-| d | e | f |
-| g | h | i |
++---+---+---+---+
+| a | b | c | d |
++---+---+---+---+
+| a | b | c | d |
++---+---+---+---+
+| a | b | c | d |
++---+---+---+---+
 
 Documentation
 -------------
@@ -19,6 +23,17 @@ Documentation
 Usage
 -----
 
-`spsolve abcdefghi`
+Run command:
 
-TODO: typing
+.. code-block:: sh
+
+    spsolve
+
+and give the input in following format:
+
+.. code-block:: sh
+
+    asdf
+    defr
+    tggg
+    tgtg

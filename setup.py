@@ -33,6 +33,7 @@ setup(
     install_requires=[],
     packages=find_packages('src'),
     package_dir={'': 'src'},
+    package_data={'': ['words/words.txt']},
     namespace_packages=['sanapelisolver'],
     entry_points={
         'console_scripts': [

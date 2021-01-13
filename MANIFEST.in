@@ -1,5 +1,6 @@
 include tox.ini
 recursive-include src *.py
+include src *.txt
 include README.md
 recursive-include tests test*
 include tests __init__.py
